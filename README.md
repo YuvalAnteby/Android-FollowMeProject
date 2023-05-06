@@ -18,6 +18,7 @@ Follow Me project was my highschool final year project for the matriculation sco
 
 ## Usage
 While using the app the main feature is the Flight activity which include several settings and options for your usage.
+
 ![Flight Activity](https://user-images.githubusercontent.com/24898815/236634389-cc78c263-9db5-4ea1-bfe5-a1e69b24d4e9.png)
 
 
