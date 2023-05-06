@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="12dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_height="70dp"
+    android:background="@drawable/dialog_background">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/divier1"
+        android:text="Name"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/divier1"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/tvEmail"
+
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="Email@gmail.com"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/divier2"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/tvEmail"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tvPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/divier2"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</RelativeLayout>

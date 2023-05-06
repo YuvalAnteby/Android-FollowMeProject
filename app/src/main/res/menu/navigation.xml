@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_fly"
+        android:icon="@drawable/ic_baseline_flight_takeoff_24px"
+        android:title="Fly"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/navigation_gallery"
+        android:icon="@drawable/ic_baseline_perm_media_24px"
+        android:title="Gallery &amp; Save"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/navigation_config"
+        android:icon="@drawable/settings"
+        android:title="Setting"
+        app:showAsAction="always|withText" />
+</menu>

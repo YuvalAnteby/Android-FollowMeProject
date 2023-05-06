@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.dji.GSDemo.GoogleMap.Activities.MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/black_half"
+        android:padding="12dp">
+
+        <dji.ux.widget.dashboard.CompassWidget xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/compassWidget"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <dji.ux.widget.dashboard.AltitudeWidget
+            android:id="@+id/altitudeWidget"
+            android:layout_width="71dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/compassWidget" />
+
+        <dji.ux.widget.dashboard.VerticalVelocityWidget
+            android:id="@+id/verticalVelocityWidget"
+            android:layout_width="71dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/altitudeWidget" />
+
+        <dji.ux.widget.dashboard.HorizontalVelocityWidget
+            android:id="@+id/horizontalVelocityWidget"
+            android:layout_width="71dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/verticalVelocityWidget" />
+
+        <dji.ux.widget.WiFiSignalWidget
+            android:id="@+id/wifiWidget"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/horizontalVelocityWidget" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnGot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeDashboard"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_btn"
+        android:text="Got it"
+        android:textColor="@color/White" />
+
+    <ImageButton
+        android:id="@+id/btnTakeoff"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/spacer"
+        android:layout_marginBottom="20dp"
+        android:background="@color/transparent"
+        android:src="@drawable/takeoff" />
+
+    <TextView
+        android:id="@+id/tutorialStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spacer"
+        android:layout_marginBottom="30dp"
+        android:layout_toEndOf="@+id/btnTakeoff"
+        android:text="Press here to start/stop the mission"
+        android:textColor="@color/White"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/btnLand"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spacer"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparent"
+        android:src="@drawable/leftmenu_dlg_landing" />
+
+    <TextView
+        android:id="@+id/tutorialLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnTakeoff"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/btnLand"
+        android:text="Press here to land the drone"
+        android:textColor="@color/White"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/btnRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/navigation"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent"
+        android:src="@drawable/button" />
+
+    <TextView
+        android:id="@+id/tutorialPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnRecord"
+        android:layout_centerHorizontal="true"
+        android:text="Press here to take photos"
+        android:textColor="@color/White"
+        android:textSize="18sp" />
+
+    <TextureView
+        android:id="@+id/video_previewer_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation"
+        android:layout_below="@+id/progressBar"
+        android:visibility="invisible" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_weight="0.3"
+        android:background="@color/White"
+        app:menu="@menu/navigation" />
+
+
+    <Space
+        android:id="@+id/spacer"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true" />
+
+
+</RelativeLayout>
